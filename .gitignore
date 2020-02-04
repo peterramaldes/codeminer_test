@@ -1,17 +1,13 @@
-# Default Lein
 /target
+/lib
 /classes
 /checkouts
-profiles.clj
 pom.xml
 pom.xml.asc
 *.jar
 *.class
 /.lein-*
 /.nrepl-port
-.hgignore
-.hg/
 
-# Intellij IDEA
-.idea/
+.idea
 *.iml
