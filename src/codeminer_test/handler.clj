@@ -1,11 +1,17 @@
 (ns codeminer-test.handler
-  (:require [compojure.core :refer :all]
-            [compojure.route :as route]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+ (:require [compojure.core :refer :all]
+           [compojure.route :as route]
+           [compojure.handler :as handler]
+           [ring.middleware.json :as json]
+           [ring.util.response :refer [response]]))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World")
-  (route/not-found "Not Found"))
+           (GET "/" [] (response "Hello World"))
+           (POST "/api/survivors" {:keys [params]} (let [{:keys [name age gender last-location]} params]
+                                                    (response {:name name :age age :gender gender :last-location last-location})))
+           (route/not-found "Not Found"))
 
 (def app
-  (wrap-defaults app-routes site-defaults))
+ (-> (handler/api app-routes)
+     (json/wrap-json-params)
+     (json/wrap-json-response)))
