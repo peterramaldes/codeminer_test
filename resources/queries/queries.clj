@@ -4,8 +4,8 @@
 
 (sql/survivors-all db)
 
-(sql/survivors db {:cols ["name" "age"]})
+(sql/survivors db {:cols ["id" "name" "age"]})
 
-(sql/survivor-by-id db {:id #uuid"9e01df0b-d816-4c83-8fcd-86f50664db1b"})
+(sql/survivor-by-id db {:id #uuid"<ID>"})
 
 (sql/survivors-by-name-like db {:name-like "P%"})
