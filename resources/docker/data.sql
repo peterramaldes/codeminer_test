@@ -1,9 +1,9 @@
 \c codeminer_test;
 
-INSERT INTO ITEM_SPECIFICATION (name, points) VALUES ('Water', 4);
-INSERT INTO ITEM_SPECIFICATION (name, points) VALUES ('Food', 3);
-INSERT INTO ITEM_SPECIFICATION (name, points) VALUES ('Medication', 2);
-INSERT INTO ITEM_SPECIFICATION (name, points) VALUES ('Ammunition', 1);
+INSERT INTO ITEM_SPECIFICATION (name, point) VALUES ('Water', 4);
+INSERT INTO ITEM_SPECIFICATION (name, point) VALUES ('Food', 3);
+INSERT INTO ITEM_SPECIFICATION (name, point) VALUES ('Medication', 2);
+INSERT INTO ITEM_SPECIFICATION (name, point) VALUES ('Ammunition', 1);
 
 INSERT INTO SURVIVOR (name, age, gender, latitude, longitude) VALUES ('Peter A. Ramaldes', 24, 'M', 50, 100);
 INSERT INTO SURVIVOR (name, age, gender, latitude, longitude) VALUES ('Pamela A. Fracalossi', 25, 'F', 250, 300);

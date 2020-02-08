@@ -4,5 +4,5 @@
  {:classname   "org.postgresql.Driver"
   :subprotocol "postgresql"
   :subname     "//localhost:5432/codeminer_test"
-  :user        "postgres"
-  :password    "postgres"})
+  :user        "codeminer_user"
+  :password    "codeminer_pass"})

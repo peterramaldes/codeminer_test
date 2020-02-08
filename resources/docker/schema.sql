@@ -16,7 +16,7 @@ CREATE TABLE SURVIVOR (id uuid DEFAULT uuid_generate_v4(),
 
 CREATE TABLE ITEM_SPECIFICATION (id uuid DEFAULT uuid_generate_v4(),
                                  name VARCHAR NOT NULL,
-                                 points INTEGER NOT NULL,
+                                 point INTEGER NOT NULL,
                                  PRIMARY KEY (id));
 
 CREATE TABLE INVENTORY (id_survivor uuid NOT NULL,
