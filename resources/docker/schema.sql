@@ -1,6 +1,6 @@
 CREATE DATABASE codeminer_test;
 CREATE USER codeminer_user WITH PASSWORD 'codeminer_pass';
-GRANT ALL PRIVILEGES ON DATABASE "codeminer_test" to codeminer_user;
+GRANT ALL PRIVILEGES ON DATABASE codeminer_test to codeminer_user;
 
 \c codeminer_test;
 
@@ -25,3 +25,7 @@ CREATE TABLE INVENTORY (id_survivor uuid NOT NULL,
                         PRIMARY KEY (id_survivor, id_item),
                         FOREIGN KEY (id_survivor) REFERENCES SURVIVOR (id),
                         FOREIGN KEY (id_item)     REFERENCES ITEM_SPECIFICATION (id));
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON SURVIVOR to codeminer_user;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ITEM_SPECIFICATION to codeminer_user;
+GRANT SELECT, INSERT, UPDATE, DELETE ON INVENTORY to codeminer_user;
